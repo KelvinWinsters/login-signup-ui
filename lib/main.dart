@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:log_in/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        '/signup':(BuildContext context) => new SignUp()
+      },
       home: new MyHomePage(),
     );
   }
@@ -160,7 +164,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(),),
               SizedBox(width: 5.0,),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/signup');
+                },
                 child: Text('Register',
                   style: TextStyle(
                     color: Colors.lightBlue,
