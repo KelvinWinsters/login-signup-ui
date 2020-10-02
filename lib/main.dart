@@ -69,14 +69,17 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 TextField(
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.email),
                       labelText: "Email",
                       labelStyle: TextStyle(
                           fontFamily: "",
                           fontWeight: FontWeight.bold,
+
                           color: Colors.grey)),
                 ),
                 TextField(
                   decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
                       labelText: "Password",
                       labelStyle: TextStyle(
                           fontFamily: "",
